@@ -30,23 +30,7 @@ ul {
     list-style-type: none;
 }
 
-/* Navigation bar*/
-nav {
-    position: absolute;
-    top: 25px;
-    width: 100%;
-}
 
-#menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 12%;
-}
-
-#menu li {
-    text-align: center;
-}
 
 /* Hero logo and button section*/
 #hero {
@@ -62,7 +46,7 @@ nav {
 }
 
 #play-button {
-    
+
     padding: 10px 15px;
     margin: auto;
     background-color: #f72f2f;
@@ -71,9 +55,22 @@ nav {
     font-weight: bold;
     border-radius: 25px;
     border: none;
-    
+
 }
 
+#how-to-play-button {
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f72f2f;
+    color: #dcf8de;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+
+}
 
 /*footer styles*/
 
@@ -96,11 +93,14 @@ nav {
     transition: all 0.2s ease-in-out;
 }
 
+/*media querry:mouse enabled devices only*/
 @media (hover: hover) {
     #play-button:hover {
         background-color: #f04646;
         color: #a9daf7;
-        box-shadow:0 8px 8px 0 rgba(241, 46, 46, 0.3);
-        
+        box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
 }
+
+/*media querry: tablets and larger (768 px up)*/
+@media screen and (min-width:768px) {}
