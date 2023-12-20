@@ -30,8 +30,6 @@ ul {
     list-style-type: none;
 }
 
-
-
 /* Hero logo and button section*/
 #hero {
     display: flex;
@@ -78,8 +76,9 @@ ul {
 
 /*social media icon hover actions*/
 #social-network i:hover {
-    transform: scale(1.5);
+    transform: scale(1.6);
     transition: all 0.2s ease-in-out;
+    color: #f04646;
 }
 
 /*media querry:mouse enabled devices only*/
@@ -94,5 +93,8 @@ ul {
 
 /*media querry: tablets and larger (768 px up)*/
 @media screen and (min-width:768px) {
-
+    #hero-img{
+        content: url(../img/logo-removebg.png);
+        max-height: 750px;
+    }
 }
