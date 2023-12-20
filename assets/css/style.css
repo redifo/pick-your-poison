@@ -24,41 +24,39 @@ main {
     flex: 1 0 auto;
     margin-top: 0px;
 }
-
-ul {
+ul{
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-
 }
-
 /* Navigation bar*/
 nav {
     position: absolute;
-    left: 0;
-    top: 20px;
+    top: 25px;
     width: 100%;
 }
-#hero{
-    text-align: center;
-    margin: auto;
-    max-width: 400px; 
-    padding: 20px;
-}
-#hero-img{
-    display: block;
-    margin: 0 auto;
-}
 #menu {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 25px;
 }
 
 #menu li {
     text-align: center;
 }
+/* Hero logo and button section*/
+#hero{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding:15%;
+}
+#hero-img{
+    
+}
+
 /*footer styles*/
 
 #social-network {
