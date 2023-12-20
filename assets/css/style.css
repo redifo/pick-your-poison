@@ -17,7 +17,11 @@ body {
     /*main project font*/
     font-family: 'Work Sans', sans-serif;
 }
-
+main{
+    background-color: #ff8800;
+    flex: 1 0 auto;
+    margin-top: 100px;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -29,22 +33,8 @@ nav {
     position: absolute;
     left: 0;
     top: 100px;
-    display: none;
     width: 100%;
-    box-shadow: 1px 5px 5px #379683;
-}
-
-/* nav toggle*/
-#nav-toggle:checked~nav {
-    display: block;
-}
-
-#nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    font-size: 2rem;
+    
 }
 
 /*footer styles*/
@@ -59,7 +49,7 @@ nav {
 #social-network i {
     font-size: 160%;
     padding: 5%;
-    color: #33aa05;
+    color: #2c9b00;
 }
 
 /*social media icon hover actions*/
