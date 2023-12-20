@@ -42,28 +42,17 @@ ul {
 }
 
 #hero-img {
+    width: 100%;
     object-fit: contain;
+    max-height: 500px;
 }
 
-#play-button {
-
-    padding: 10px 15px;
-    margin: auto;
-    background-color: #f72f2f;
-    color: #dcf8de;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 25px;
-    border: none;
-
-}
-
-#how-to-play-button {
-    padding: 10px 15px;
+.main-button {
     margin-top: 20px;
+    padding: 10px 17px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f72f2f;
+    background-color: #028509;
     color: #dcf8de;
     font-size: 1.5rem;
     font-weight: bold;
@@ -95,12 +84,15 @@ ul {
 
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
-    #play-button:hover {
+    .main-button:hover {
         background-color: #f04646;
         color: #a9daf7;
         box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
+    
 }
 
 /*media querry: tablets and larger (768 px up)*/
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+
+}
