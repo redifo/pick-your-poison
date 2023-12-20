@@ -16,27 +16,49 @@ body {
     flex-direction: column;
     /*main project font*/
     font-family: 'Work Sans', sans-serif;
+    background-color: #ffae00;
 }
-main{
-    background-color: #ff8800;
+
+main {
+    background-color: #ffae00;
     flex: 1 0 auto;
-    margin-top: 100px;
+    margin-top: 0px;
 }
+
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
+
 }
 
 /* Navigation bar*/
 nav {
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 20px;
     width: 100%;
-    
+}
+#hero{
+    text-align: center;
+    margin: auto;
+    max-width: 400px; 
+    padding: 20px;
+}
+#hero-img{
+    display: block;
+    margin: 0 auto;
+}
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
 }
 
+#menu li {
+    text-align: center;
+}
 /*footer styles*/
 
 #social-network {
@@ -49,7 +71,7 @@ nav {
 #social-network i {
     font-size: 160%;
     padding: 5%;
-    color: #2c9b00;
+    color: #028509;
 }
 
 /*social media icon hover actions*/
