@@ -23,38 +23,48 @@ main {
     background-color: #ffae00;
     flex: 1 0 auto;
     margin-top: 0px;
+
 }
-ul{
+
+ul {
     list-style-type: none;
 }
+
 /* Navigation bar*/
 nav {
     position: absolute;
     top: 25px;
     width: 100%;
 }
+
 #menu {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 12%;
 }
 
 #menu li {
     text-align: center;
 }
+
 /* Hero logo and button section*/
-#hero{
-    display:flex;
+#hero {
+    display: flex;
     flex-direction: column;
     text-align: center;
-    margin: auto;
     width: 100%;
-    padding:15%;
+    flex-wrap: wrap;
 }
-#hero-img{
-    
+
+#hero-img {
+    object-fit: contain;
+}
+
+#play-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    margin: auto;
 }
 
 /*footer styles*/
