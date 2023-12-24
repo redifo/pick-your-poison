@@ -11,19 +11,21 @@
 
 /*general styles*/
 body {
-    min-height: 100vh;
+    height: 97vh;
     display: flex;
     flex-direction: column;
     /*main project font*/
     font-family: 'Work Sans', sans-serif;
-    background-color: #ffae00;
+    background-color: #fcb41a;
+    
 }
 
 main {
-    background-color: #ffae00;
-    flex: 1 0 auto;
+    background-color: #fcb41a;
+    flex: 1;
     margin-top: 0px;
-
+    height: 100%;
+    
 }
 
 ul {
@@ -46,11 +48,11 @@ ul {
 }
 
 .main-button {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px 17px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #028509;
+    background-color: #026807;
     color: #dcf8de;
     font-size: 1.5rem;
     font-weight: bold;
@@ -60,6 +62,12 @@ ul {
 }
 
 /*footer styles*/
+footer p {
+    text-align: center;
+    color: #026807;
+    font-weight: 600;
+    font-size: small;
+}
 
 #social-network {
     text-align: center;
@@ -71,15 +79,10 @@ ul {
 #social-network i {
     font-size: 160%;
     padding: 5%;
-    color: #028509;
+    color: #026807;
 }
 
-/*social media icon hover actions*/
-#social-network i:hover {
-    transform: scale(1.6);
-    transition: all 0.2s ease-in-out;
-    color: #f04646;
-}
+
 
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
@@ -88,13 +91,19 @@ ul {
         color: #a9daf7;
         box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
-    
+
+    /*social media icon hover actions*/
+    #social-network i:hover {
+        transform: scale(1.6);
+        transition: all 0.2s ease-in-out;
+        color: #f04646;
+    }
 }
 
 /*media querry: tablets and larger (768 px up)*/
 @media screen and (min-width:768px) {
-    #hero-img{
+    #hero-img {
         content: url(../img/logo-removebg.png);
-        max-height: 750px;
+        max-height: 650px;
     }
 }
