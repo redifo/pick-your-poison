@@ -82,19 +82,17 @@ footer p {
 }
 
 /*Game page styles*/
-nav{
-    text-align: center;
-    height: 200px;
+header{
+    max-height: 300px;
     flex: 1;
-}
-
-#nav-image{
-        height: 100%;
-        object-fit: contain;
-}
-
-.nav-image-a{
+    margin: auto;
     
+}
+
+#nav-img{
+        object-fit: contain;
+        width: 100%;
+        max-height: 300px;
 }
 
 .container{
@@ -103,9 +101,28 @@ nav{
     max-width: 80%;
     margin: auto;
     border-radius: 20px;
-    box-shadow: 2px 2px 5px 1px#f04646;
+    box-shadow: 0 0 10px 2px#f04646;
+    padding: 15px;
 }
 
+.answers-container{
+    display: grid;
+    grid-template-columns:repeat(2,auto);
+    gap: 15px;
+    margin: 20px;
+}
+
+.answer-button{
+    border-radius: 10px;
+    background-color: #fcb41a;
+    padding: 5px 5px;
+}
+
+#next-button{
+    border-radius: 10px;
+    background-color: #fcb41a;
+    padding: 5px 15px;
+}
 
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
@@ -120,6 +137,11 @@ nav{
         transform: scale(1.6);
         transition: all 0.2s ease-in-out;
         color: #f04646;
+    }
+    #nav-img:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+        
     }
 }
 
