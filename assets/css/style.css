@@ -17,7 +17,7 @@ body {
     /*main project font*/
     font-family: 'Work Sans', sans-serif;
     background-color: #fcb41a;
-    
+
 }
 
 main {
@@ -25,7 +25,7 @@ main {
     flex: 1;
     margin-top: 0px;
     height: 100%;
-    
+
 }
 
 ul {
@@ -66,7 +66,7 @@ footer p {
     text-align: center;
     color: #026807;
     font-weight: 600;
-    font-size: small;
+    font-size: 16px;
 }
 
 #social-network {
@@ -76,26 +76,26 @@ footer p {
 }
 
 #social-network i {
-    font-size: 160%;
+    font-size: 220%;
     padding: 5%;
     color: #026807;
 }
 
 /*Game page styles*/
-header{
+header {
     max-height: 300px;
     flex: 1;
     margin: auto;
-    
+
 }
 
-#nav-img{
-        object-fit: contain;
-        width: 100%;
-        max-height: 300px;
+#nav-img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 300px;
 }
 
-.container{
+.container {
     text-align: center;
     background-color: white;
     max-width: 80%;
@@ -105,30 +105,45 @@ header{
     padding: 15px;
 }
 
-.answers-container{
+#question {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.answers-container {
     display: grid;
-    grid-template-columns:repeat(2,auto);
+    grid-template-columns: repeat(2, auto);
     gap: 15px;
     margin: 20px;
 }
 
-.answer-button{
+.answer-button {
     border-radius: 10px;
     background-color: #fcb41a;
     padding: 5px 5px;
+    font-size: 17px;
 }
 
-.answer-button.correct{
+.answer-button.correct {
     background-color: #026807;
 }
-.answer-button.wrong{
+
+.answer-button.wrong {
     background-color: #f04646;
 }
-#next-button{
+
+.next-button {
     border-radius: 10px;
     background-color: #fcb41a;
     padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
+
+/*Css class to hide elements*/
+.hide {
+    display: none;
+} 
 
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
@@ -144,22 +159,24 @@ header{
         transition: all 0.2s ease-in-out;
         color: #f04646;
     }
-
-    #nav-img:hover{
+    /* Game page logo hover action*/
+    #nav-img:hover {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
-        
+
     }
-    .answer-button:hover{
+    /* game page answer buttons hover actions*/
+    .answer-button:hover {
         transform: scale(1.01);
         transition: all 0.2s ease-in-out;
-        background-color:#a9daf7;
-        
+        background-color: #a9daf7;
+
     }
-    #next-button:hover{
+    /*next question hover actions*/
+    .next-button:hover {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
-        background-color:#a9daf7;
+        background-color: #a9daf7;
     }
 }
 
