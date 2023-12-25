@@ -1,12 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     let navImg = document.getElementById("nav-img");
     // Add a click event listener to the nav-img
-    navImg.addEventListener("click", function() {
-        alert("Are you sure you want to go to Home Page? Your game score will reset");
+    navImg.addEventListener("click", function (event) {
+        
+        event.preventDefault();
+        
+        let userConfirm=confirm("Are you sure you want to go to Home Page? Your game score will reset");
+        if (userConfirm){
+            window.location.href = "index.html";
+        }
     });
+
     for (let button of buttons) {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
             } else {
@@ -16,26 +23,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-function runGame(){
+function runGame() {
 
 }
 
-function checkName(){
+function checkName() {
 
 }
 
-function CheckAnswer(){
+function CheckAnswer() {
 
 }
 
-function incrementScore(){
+function incrementScore() {
 
 }
 
-function highScore(){
-    
-} 
+function highScore() {
 
-function displayQuestions(){
-    
+}
+
+function displayQuestions() {
+
 } 
