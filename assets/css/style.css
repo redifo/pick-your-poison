@@ -118,6 +118,12 @@ header{
     padding: 5px 5px;
 }
 
+.answer-button.correct{
+    background-color: #026807;
+}
+.answer-button.wrong{
+    background-color: #f04646;
+}
 #next-button{
     border-radius: 10px;
     background-color: #fcb41a;
@@ -138,16 +144,29 @@ header{
         transition: all 0.2s ease-in-out;
         color: #f04646;
     }
+
     #nav-img:hover{
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
         
+    }
+    .answer-button:hover{
+        transform: scale(1.01);
+        transition: all 0.2s ease-in-out;
+        background-color:#a9daf7;
+        
+    }
+    #next-button:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+        background-color:#a9daf7;
     }
 }
 
 /*media querry: tablets and larger (768 px up)*/
 @media screen and (min-width:768px) {
     #hero-img {
+        /*change the image to a higher resolution image on devices with large screen*/
         content: url(../img/logo-removebg.png);
         max-height: 650px;
     }
