@@ -30,14 +30,15 @@
     </header>
     <!-- Main section for showing the player name input field and questions and anwers-->
     <main>
-        <div class="player-name-container">
+        <div id="player-name-container">
             <h2>Enter Your Name</h2>
             <input type="text" id="player-name-input">
-            <button onclick="">
-                OK
+            <button onclick="checkName();">
+                SUBMIT
             </button>
+            <span id="username-feedback"></span>
         </div>
-        <div class="container">
+        <div id="container-game" class="hide">
             <div id="question-container">
                 <div id="question">Question</div>
                 <div class="answers-container">

@@ -1,3 +1,6 @@
+const playerNameContainer = document.getElementById("player-name-container")
+const gameContainer = document.getElementById("container-game")
+const feedback = document.getElementById("username-feedback");
 // Add a click event listener to the nav-img
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -13,12 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 }
 );
-/* Run the checkName function when the game.html page loads.*/
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname.includes("game.html")) {
-        checkName();
-    }
-});
+
 
 /** starts/play game button- 
  * redirects to game page
@@ -32,6 +30,16 @@ function checkName() {
     let playerName = document.getElementById("player-name-input").value;
     if (playerName.length >= 4) {
         displayQuestions();
+        playerNameContainer.classList.add("hide")
+        gameContainer.classList.remove("hide")
+    }
+    else if(playerName==""){
+        feedback.textContent = "Username cannot be left blank";
+        feedback.style.color = "red";
+    }
+    else if(playerName.length<4){
+        feedback.textContent = "Username should be at least 4 characters long.";
+        feedback.style.color = "red";
     }
 }
 
