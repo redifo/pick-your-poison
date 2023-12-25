@@ -58,7 +58,6 @@ ul {
     font-weight: bold;
     border-radius: 25px;
     border: none;
-
 }
 
 /*footer styles*/
@@ -140,10 +139,49 @@ header {
     font-weight: bold;
 }
 
+/*Name inquiry field styles*/
+
+.player-name-container {
+    background-color: white;
+    width: 60%;
+    right: 20%;
+    left: auto;
+    padding: 35px;
+    z-index: 99;
+    position: fixed;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    
+
+}
+.player-name-container h2{
+    font-size: 2rem;
+    
+}
+.player-name-container input{
+    height: 35px;
+    width: 60%;
+    vertical-align: middle
+    
+}
+.player-name-container button{
+    border-radius: 10px;
+    padding:5px;
+    font-size: 25px;
+    background-color: #fcb41a;
+    vertical-align: middle
+    
+}
+.player-name-container button:active{
+    background-color: #026807;
+}
+
 /*Css class to hide elements*/
 .hide {
     display: none;
-} 
+}
 
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
@@ -159,12 +197,14 @@ header {
         transition: all 0.2s ease-in-out;
         color: #f04646;
     }
+
     /* Game page logo hover action*/
     #nav-img:hover {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
 
     }
+
     /* game page answer buttons hover actions*/
     .answer-button:hover {
         transform: scale(1.01);
@@ -172,6 +212,7 @@ header {
         background-color: #a9daf7;
 
     }
+
     /*next question hover actions*/
     .next-button:hover {
         transform: scale(1.1);
