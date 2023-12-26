@@ -131,7 +131,7 @@ header {
     background-color: #f04646;
 }
 
-.next-button {
+#next-button {
     border-radius: 10px;
     background-color: #fcb41a;
     padding: 5px 15px;
@@ -225,7 +225,7 @@ header {
     }
 
     /*next question hover actions*/
-    .next-button:hover {
+    #next-button:hover {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
         background-color: #a9daf7;

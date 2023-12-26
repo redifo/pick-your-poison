@@ -1,7 +1,8 @@
 const playerNameContainer = document.getElementById("player-name-container")
 const gameContainer = document.getElementById("container-game")
 const feedback = document.getElementById("username-feedback");
-
+const questionsContainer = document.getElementById("question-container");
+const nextButton = document.getElementById("next-button");
 
 // Add a click event listener to the nav-img after page loads
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,8 +29,8 @@ function runGame() {
     window.location.href = "game.html";
 }
 /** Check player name if valid show questions 
- * checks for playername lenght
- * shuffle the questions and show question
+ * checks for playername length
+ * shuffle the questions and call show question function
  * */
 function checkName() {
     let playerName = document.getElementById("player-name-input").value;
@@ -40,7 +41,7 @@ function checkName() {
         displayQuestions();
     }
     else if (playerName == "") {
-        feedback.textContent = "Username cannot be left blank";
+        feedback.textContent = "Name field cannot be left blank";
         feedback.style.color = "red";
     }
     else if (playerName.length < 4) {
@@ -50,7 +51,7 @@ function checkName() {
 }
 
 function CheckAnswer() {
-
+    nextButton.classList.remove("hide")
 }
 
 function incrementScore() {
@@ -62,6 +63,8 @@ function ShowScore() {
 }
 
 function displayQuestions() {
+    let questionIndex = 0;
+    const curretQuestionn = questions[questionIndex]
 
 }
 
