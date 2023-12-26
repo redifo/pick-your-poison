@@ -158,6 +158,7 @@ header {
 
 #player-name-container h2 {
     font-size: 2rem;
+    margin-bottom: 5px;
 }
 
 #player-name-container input {
@@ -174,7 +175,8 @@ header {
     margin-left: 30%;
     margin-right: 30%;
     width: 40%;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 5px;
     font-size: 25px;
@@ -184,6 +186,7 @@ header {
 
 #player-name-container button:active {
     background-color: #026807;
+    
 }
 
 /*Css class to hide elements*/
@@ -226,6 +229,9 @@ header {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;
         background-color: #a9daf7;
+    }
+    #player-name-container button:hover {
+        color: red;
     }
 }
 
