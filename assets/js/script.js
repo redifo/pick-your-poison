@@ -8,6 +8,7 @@ const closeButton = document.getElementById("close-button");
 const rules = document.getElementById("rules");
 const scoreElement = document.getElementById("score");
 const scoreContainer = document.getElementById("score-container");
+const timerContainer = document.getElementById("timer-container");
 
 const answerButtons = document.getElementsByClassName("answer-button");
 
@@ -285,6 +286,7 @@ function checkName() {
         playerNameContainer.classList.add("hide")
         gameContainer.classList.remove("hide")
         scoreContainer.classList.remove("hide")
+        timerContainer.classList.remove("hide")
         displayQuestion();
         
     }
