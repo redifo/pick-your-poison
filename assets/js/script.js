@@ -3,6 +3,7 @@ const gameContainer = document.getElementById("container-game")
 const feedback = document.getElementById("username-feedback");
 const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next-button");
+const resetButton = document.getElementById("reset-button");
 
 const answerButtons = document.getElementsByClassName("answer-button");
 const answer1 = document.getElementById("answer1");
@@ -10,7 +11,8 @@ const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 let questionIndex = 0;
-let score= 0;
+let score = 0;
+
 const questions = [
     {
         question: "What colorless liqueur is made from cherries?",
@@ -23,7 +25,7 @@ const questions = [
     }
 ]
 
-// Add a click event listener to the nav-img after page loads
+// Add a click event listener to the nav-img after page loads to prevent accidental click resetting the game
 document.addEventListener("DOMContentLoaded", function () {
 
     let navImg = document.getElementById("nav-img");
@@ -40,14 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
 );
 
 
-/** starts/play game button- 
+/** start/play game button- 
  * redirects to game page
  * */
 function runGame() {
     // Redirect to the game.html page
     window.location.href = "game.html";
-    
+
 }
+
 /** Checks player name for playername length if valid 
  * shuffle the questions and call display question function
  * shows questions hides name box
@@ -65,7 +68,7 @@ function checkName() {
         feedback.style.color = "red";
     }
     else if (playerName.length < 4) {
-        feedback.textContent = "Username should be at least 4 characters long.";
+        feedback.textContent = "Name should be at least 4 characters long.";
         feedback.style.color = "red";
     }
 }
@@ -75,13 +78,14 @@ function CheckAnswer() {
     nextButton.classList.remove("hide")
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
     if (clickedAnswer === correctAnswerText) {
-        
+
         score++;
     }
-    else { 
+    else {
         console.log("yanlis amk")
     }
 }
+/*Next button code- increases question index and checks if there are any more questions if not displays reset button*/
 nextButton.addEventListener("click", function () {
     // Increment question index
     questionIndex++;
@@ -90,40 +94,43 @@ nextButton.addEventListener("click", function () {
         // Display the next question
         displayQuestion();
     } else {
+        resetButton.classList.remove("hide")
         alert(`Game Over!`);
     }
 });
-function incrementScore() {
-
-}
+/*reset button evet listener when clicked resets question index score and timer*/
+resetButton.addEventListener("click", function () {
+    questionIndex = 0;
+    score = 0;
+});
 
 function ShowScore() {
 
-}
+    }
 
 function displayQuestion() {
 
-    let curretQuestionn = questions[questionIndex]
-    questionElement.innerHTML = curretQuestionn.question
-    let currentAnswers = questions[questionIndex].answers
-    shuffle(currentAnswers)
-    answer1.innerHTML = currentAnswers[0].text
-    answer2.innerHTML = currentAnswers[1].text
-    answer3.innerHTML = currentAnswers[2].text
-    answer4.innerHTML = currentAnswers[3].text
-    
-    for (let i = 0; i < answerButtons.length; i++) {
-        if (currentAnswers[i].correct) {
-            console.log("Correct answer found!");
-        }
-        answerButtons[i].addEventListener("click", CheckAnswer);
-    }
+        let curretQuestionn = questions[questionIndex]
+        questionElement.innerHTML = curretQuestionn.question
+        let currentAnswers = questions[questionIndex].answers
+        shuffle(currentAnswers)
+        answer1.innerHTML = currentAnswers[0].text
+        answer2.innerHTML = currentAnswers[1].text
+        answer3.innerHTML = currentAnswers[2].text
+        answer4.innerHTML = currentAnswers[3].text
 
-}
+        for (let i = 0; i < answerButtons.length; i++) {
+            if (currentAnswers[i].correct) {
+                console.log("Correct answer found!");
+            }
+            answerButtons[i].addEventListener("click", CheckAnswer);
+        }
+
+    }
 
 
 
 /**shuffles a given array */
 function shuffle(array) {
-    array.sort(() => Math.random() - 0.5);
-}
+        array.sort(() => Math.random() - 0.5);
+    }

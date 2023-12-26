@@ -59,7 +59,14 @@ ul {
     border-radius: 25px;
     border: none;
 }
-
+/*Rules/ How to play window styles*/
+#rules{
+    background-color: #dcf8de;
+    position: fixed;
+    top: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 /*footer styles*/
 footer p {
     text-align: center;
@@ -136,6 +143,15 @@ header {
     background-color: #fcb41a;
     padding: 5px 15px;
     font-size: 20px;
+    font-weight: bold;
+}
+
+#reset-button {
+    border-radius: 10px;
+    background-color: #026807;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: white;
     font-weight: bold;
 }
 
