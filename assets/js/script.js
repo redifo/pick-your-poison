@@ -7,8 +7,10 @@ const resetButton = document.getElementById("reset-button");
 const closeButton = document.getElementById("close-button");
 const rules = document.getElementById("rules");
 const scoreElement = document.getElementById("score");
+const scoreContainer = document.getElementById("score-container");
 
 const answerButtons = document.getElementsByClassName("answer-button");
+
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
@@ -16,6 +18,7 @@ const answer4 = document.getElementById("answer4");
 let questionIndex = 0;
 let score = 0;
 
+/*questions data*/
 const questions = [
     {
         question: "What is the primary ingredient in a Mojito?",
@@ -281,7 +284,9 @@ function checkName() {
         shuffle(questions);
         playerNameContainer.classList.add("hide")
         gameContainer.classList.remove("hide")
+        scoreContainer.classList.remove("hide")
         displayQuestion();
+        
     }
     else if (playerName == "") {
         feedback.textContent = "Name field cannot be left blank";
@@ -292,17 +297,20 @@ function checkName() {
         feedback.style.color = "red";
     }
 }
-/**
- * 
+/**Retrieves the clicked answer
+ * Reveals Next Button
+ * Increases the score by 10 if the answer is correct.
+ * Updates the user's score, then calls the showScore funciton
+ * Disables Answer Buttons
  */
 function CheckAnswer() {
     let clickedAnswer = this.innerHTML;
     nextButton.classList.remove("hide")
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
-    
+
     if (clickedAnswer === correctAnswerText) {
 
-        score=score+10;
+        score = score + 10;
         ShowScore();
     }
     else {
@@ -362,8 +370,6 @@ function displayQuestion() {
     }
 
 }
-
-
 
 /**shuffles a given array */
 function shuffle(array) {
