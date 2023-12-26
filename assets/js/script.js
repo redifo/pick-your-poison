@@ -6,7 +6,7 @@ const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
 const closeButton = document.getElementById("close-button");
 const rules = document.getElementById("rules");
-
+const scoreElement = document.getElementById("score");
 
 const answerButtons = document.getElementsByClassName("answer-button");
 const answer1 = document.getElementById("answer1");
@@ -292,17 +292,25 @@ function checkName() {
         feedback.style.color = "red";
     }
 }
-
+/**
+ * 
+ */
 function CheckAnswer() {
     let clickedAnswer = this.innerHTML;
     nextButton.classList.remove("hide")
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
+    
     if (clickedAnswer === correctAnswerText) {
 
-        score++;
+        score=score+10;
+        ShowScore();
     }
     else {
         console.log("yanlis amk")
+    }
+    // Disable all answer buttons to prevent further clicks
+    for (let button of answerButtons) {
+        button.disabled = true;
     }
 }
 
@@ -311,7 +319,8 @@ nextButton.addEventListener("click", function () {
     // Increment question index
     questionIndex++;
     nextButton.classList.add("hide");
-    if (questionIndex < questions.length) {
+    /*limit the number of questions to be shown per game to 10*/
+    if (questionIndex < 11) {
         // Display the next question
         displayQuestion();
     } else {
@@ -320,14 +329,14 @@ nextButton.addEventListener("click", function () {
     }
 });
 
-/*reset button evet listener when clicked resets question index score and timer*/
+/*reset button evet listener when clicked resets question index, score and timer*/
 resetButton.addEventListener("click", function () {
     questionIndex = 0;
     score = 0;
 });
 
 function ShowScore() {
-
+    scoreElement.textContent = score;
 }
 
 function displayQuestion() {
@@ -346,6 +355,10 @@ function displayQuestion() {
             console.log("Correct answer found!");
         }
         answerButtons[i].addEventListener("click", CheckAnswer);
+    }
+    //Reanable buttons after showing a new question
+    for (let button of answerButtons) {
+        button.disabled = false;
     }
 
 }
