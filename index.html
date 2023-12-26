@@ -31,10 +31,10 @@
                     alt="Pick your Poison no background logo 500px">
             </a>
             <button onclick="runGame()" id="play-button" class="main-button">PLAY THE GAME</button>
-            <button onclick="" id="how-to-play-button" class="main-button">HOW TO PLAY</button>
+            <button onclick="showRules();" id="how-to-play-button" class="main-button">HOW TO PLAY</button>
             <button onclick="" class="main-button">SETTINGS</button>
         </section>
-        <div id="rules" class="h">
+        <div id="rules" class="hide">
             <ol>
                 <li>After clicking Play the Game button you will asked for a name input.</li>
                 <li>Enter your name and press Submit to start the game.</li>
@@ -45,7 +45,7 @@
                 <li>Clicking the next button shows the next question and the timer continues.</li>
                 <li>Answer all 10 questions to complete the quiz and see your results.</li>
             </ol>
-            <button id="close-button">CLOSE</button>
+            <button onclick="hideRules();" id="close-button">CLOSE</button>
         </div>
     </main>
 

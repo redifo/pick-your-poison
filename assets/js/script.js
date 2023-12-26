@@ -4,6 +4,9 @@ const feedback = document.getElementById("username-feedback");
 const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
+const closeButton =document.getElementById("close-button");
+const rules = document.getElementById("rules");
+
 
 const answerButtons = document.getElementsByClassName("answer-button");
 const answer1 = document.getElementById("answer1");
@@ -134,3 +137,11 @@ function displayQuestion() {
 function shuffle(array) {
         array.sort(() => Math.random() - 0.5);
     }
+
+function showRules(){
+    rules.classList.remove("hide")
+}
+function hideRules(){
+    rules.classList.add("hide")
+}
+

@@ -66,9 +66,11 @@ ul {
     align-items: center;
     background-color: #dcf8de;
     position: fixed;
-    top: 10%;
-    margin-left: 15%;
-    margin-right: 15%;
+    /*center with transform and top left position*/
+    top: 45%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
     border-radius: 25px;
     padding: 40px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
@@ -77,18 +79,21 @@ ul {
 #close-button{
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #f04646;
     color: #dcf8de;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    
 }
 
 #rules li {
     margin-bottom: 10px;
     line-height: 1.4;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /*footer styles*/
@@ -229,9 +234,9 @@ header {
     
 }
 
-/*Css class to hide elements*/
+/*Css class to hide elements important to override other display properties*/
 .hide {
-    display: none;
+    display: none !important;
 }
 
 /*media querry:mouse enabled devices only*/
@@ -241,7 +246,9 @@ header {
         color: #a9daf7;
         box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
-
+    .main-button:active{
+        transform: scale(0.9);
+    }
     /*social media icon hover actions*/
     #social-network i:hover {
         transform: scale(1.6);
@@ -275,6 +282,9 @@ header {
     }
     #close-button:hover {
         background-color: red;
+    }
+    #close-button:active {
+        transform: scale(0.9);
     }
 }
 
