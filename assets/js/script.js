@@ -1,9 +1,9 @@
 const playerNameContainer = document.getElementById("player-name-container")
 const gameContainer = document.getElementById("container-game")
 const feedback = document.getElementById("username-feedback");
-const questionsContainer = document.getElementById("question-container");
+const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next-button");
-
+let questionIndex = 0;
 // Add a click event listener to the nav-img after page loads
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -30,7 +30,7 @@ function runGame() {
 }
 /** Check player name if valid show questions 
  * checks for playername length
- * shuffle the questions and call show question function
+ * shuffle the questions and call display question function
  * */
 function checkName() {
     let playerName = document.getElementById("player-name-input").value;
@@ -38,7 +38,7 @@ function checkName() {
         shuffleQuestions(questions);
         playerNameContainer.classList.add("hide")
         gameContainer.classList.remove("hide")
-        displayQuestions();
+        displayQuestion();
     }
     else if (playerName == "") {
         feedback.textContent = "Name field cannot be left blank";
@@ -62,10 +62,11 @@ function ShowScore() {
 
 }
 
-function displayQuestions() {
-    let questionIndex = 0;
-    const curretQuestionn = questions[questionIndex]
-
+function displayQuestion() {
+    
+    let curretQuestionn = questions[questionIndex]
+    questionElement.innerHTML = curretQuestionn.question
+    console.log(curretQuestionn.question)
 }
 
 function shuffleQuestions(array){
