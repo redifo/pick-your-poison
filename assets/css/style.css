@@ -61,12 +61,36 @@ ul {
 }
 /*Rules/ How to play window styles*/
 #rules{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #dcf8de;
     position: fixed;
-    top: 50%;
-    margin-left: 20%;
-    margin-right: 20%;
+    top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
+
+#close-button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f04646;
+    color: #dcf8de;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#rules li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
 /*footer styles*/
 footer p {
     text-align: center;
@@ -248,6 +272,9 @@ header {
     }
     #player-name-container button:hover {
         color: red;
+    }
+    #close-button:hover {
+        background-color: red;
     }
 }
 
