@@ -262,6 +262,25 @@ const questions = [
 
 ]
 
+/** Prevent accidental click on main menu/home button resetting 
+ * the game with an alert on screen
+ */
+function preventHome() {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: 'Do you want to go to the Home Page? Your game score will reset.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#026807',
+        cancelButtonColor: '#f04646',
+        confirmButtonText: 'Yes, go to Home Page!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            
+            window.location.href = 'index.html';
+        }
+    });
+}
 // Add a click event listener to the nav-img after page loads to prevent accidental click resetting the game
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -270,14 +289,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault();
 
-        let userConfirm = confirm("Are you sure you want to go to Home Page? Your game score will reset");
-        if (userConfirm) {
-            window.location.href = "index.html";
+        Swal.fire({
+        title: 'Are you sure?',
+        text: 'Do you want to go to the Home Page? Your game score will reset.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#026807',
+        cancelButtonColor: '#f04646',
+        confirmButtonText: 'Yes, go to Home Page!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            
+            window.location.href = 'index.html';
         }
-    });
-}
-);
-
+})})});
 
 /** start/play game button- 
  * redirects to game page

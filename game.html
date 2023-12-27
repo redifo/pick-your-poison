@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 </head>
 
-<body> 
+<body>
     <!-- Header containing the logo -->
     <header>
         <div class="header-content">
@@ -37,7 +37,10 @@
         <a id="nav-image-a" href="index.html"><img id="nav-img" src="assets/img/logo-removebg30.png"
                 alt="Pick your Poison, got to home page link - no background logo 300px">
         </a>
-        
+        <div id="home-button-container">
+            <button onclick="preventHome();" class="home-button">Main Menu</button>
+        </div>
+
     </header>
     <!-- Main section for showing the player name input field and questions and anwers-->
     <main>
@@ -60,7 +63,7 @@
                 Score: <span id="score-finish">0</span>
             </div>
             <div id="question-container">
-                
+
                 <div id="question">Question</div>
                 <div class="answers-container">
                     <button id="answer1" class="answer-button">1</button>
@@ -72,6 +75,7 @@
             <div class="controls">
                 <button id="next-button" class="hide">Next</button>
                 <button id="reset-button" class="hide">Play Again</button>
+
             </div>
         </div>
     </main>
@@ -97,6 +101,8 @@
     <script src="https://kit.fontawesome.com/e91176a207.js" crossorigin="anonymous"></script>
     <!--javascript for the used functions-->
     <script src="assets/js/script.js"></script>
+    <!--Sweet alert2 script- used for showing alert on going back to main menu-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
