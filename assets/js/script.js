@@ -10,9 +10,18 @@ const rules = document.getElementById("rules");
 const scoreElement = document.getElementById("score");
 const scoreContainer = document.getElementById("score-container");
 const timerContainer = document.getElementById("timer-container");
-const highscoresContainer = document.getElementById("highscore-container");
-const answerButtons = document.getElementsByClassName("answer-button");
 
+const timerFinish = document.getElementById("timer-container-finish")
+const scoreFinish = document.getElementById("score-container-finish")
+const nameFinish = document.getElementById("name-container-finish")
+const timerFinishSpan = document.getElementById("timer-finish")
+const scoreFinishSpan = document.getElementById("score-finish")
+const nameFinishSpan = document.getElementById("name-finish")
+
+
+const answerButtons = document.getElementsByClassName("answer-button");
+let questionIndexElement = document.getElementById("question-index");
+const questionIndexElementContainer = document.getElementById("question-index-container");
 let timer;
 let timeInSeconds = 0;
 
@@ -284,15 +293,17 @@ function runGame() {
  * shows questions hides name box
  * */
 function checkName() {
-    let playerName = document.getElementById("player-name-input").value;
+    let playerName = document.getElementById("player-name-input").value.trim();
+    let playerNameNotTrim = document.getElementById("player-name-input").value;
     if (playerName.length >= 4) {
         shuffle(questions);
         playerNameContainer.classList.add("hide")
         gameContainer.classList.remove("hide")
         scoreContainer.classList.remove("hide")
         timerContainer.classList.remove("hide")
+        questionIndexElementContainer.classList.remove("hide")
         displayQuestion();
-
+        return playerNameNotTrim;
 
     }
     else if (playerName == "") {
@@ -345,14 +356,23 @@ nextButton.addEventListener("click", function () {
     questionIndex++;
     nextButton.classList.add("hide");
     /*limit the number of questions to be shown per game to 10*/
-    if (questionIndex < 11) {
+    if (questionIndex < 10) {
         // Display the next question
 
         displayQuestion();
 
     } else {
         resetButton.classList.remove("hide")
-
+        questionContainer.classList.add("hide")
+        timerFinishSpan.textContent = timeInSeconds;
+        nameFinishSpan.textContent = checkName();
+        scoreFinishSpan.textContent = score;
+        timerFinish.classList.remove("hide")
+        nameFinish.classList.remove("hide")
+        scoreFinish.classList.remove("hide")
+        timerContainer.classList.add("hide")
+        scoreContainer.classList.add("hide")
+        questionIndexElementContainer.classList.add("hide")
     }
 });
 
@@ -363,6 +383,12 @@ resetButton.addEventListener("click", function () {
     displayQuestion();
     resetButton.classList.add("hide")
     ShowScore();
+    resetTimer();
+    startTimer();
+    timerFinish.classList.add("hide")
+    nameFinish.classList.add("hide")
+    scoreFinish.classList.add("hide")
+    questionContainer.classList.remove("hide")
 
 });
 
@@ -388,6 +414,7 @@ function displayQuestion() {
         answerButtons[i].addEventListener("click", CheckAnswer);
     }
     startTimer();
+    showQuestionIndex();
 }
 
 /**shuffles a given array */
@@ -417,12 +444,12 @@ function showRules() {
 }
 function hideRules() {
     rules.classList.add("hide")
-    highscoresContainer.classList.add("hide")
+    
 }
 function ShowScore() {
     scoreElement.textContent = score;
 }
 
-function showHighscores() {
-    highscoresContainer.classList.remove("hide")
+function showQuestionIndex() {
+    questionIndexElement.textContent = questionIndex + 1;
 }

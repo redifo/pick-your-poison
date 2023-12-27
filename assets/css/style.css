@@ -60,8 +60,10 @@ ul {
     border-radius: 25px;
     border: none;
 }
+
 /*Rules/ How to play window styles*/
-#rules, #highscore-container{
+#rules
+ {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +79,7 @@ ul {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-#close-button{
+#close-button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
@@ -87,7 +89,7 @@ ul {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    
+
 }
 
 #rules li {
@@ -126,25 +128,26 @@ header {
 }
 
 #score-container,
-#timer-container {
+#timer-container,
+#question-index-container {
     color: #026807;
     font-size: 30px;
     font-weight: 700;
-    margin-left: 30px;
-    margin-right: 30px;
-    
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 
 .header-content {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     flex: 1;
     margin: auto;
-} 
+}
 
 #nav-img {
-    
+
     object-fit: contain;
     width: 100%;
     max-height: 300px;
@@ -175,8 +178,8 @@ header {
 .answer-button {
     border-radius: 10px;
     background-color: #fcb41a;
-    padding: 5px 5px;
-    font-size: 17px;
+    padding: 20px 5px;
+    font-size: 22px;
     font-weight: 700;
     color: blue;
 }
@@ -235,7 +238,7 @@ header {
     margin-left: 15%;
     margin-right: 15%;
     font-size: 30px;
-    
+
 }
 
 #player-name-container button {
@@ -248,12 +251,20 @@ header {
     padding: 5px;
     font-size: 25px;
     background-color: #fcb41a;
-            
+
 }
 
 #player-name-container button:active {
     background-color: #026807;
-    
+
+}
+
+/*game finsihed screen styles*/
+#score-container-finish,
+#timer-container-finish,
+#name-container-finish {
+    font-weight: 700;
+    padding: 5px;
 }
 
 /*Css class to hide elements important to override other display properties*/
@@ -268,9 +279,11 @@ header {
         color: #a9daf7;
         box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
-    .main-button:active{
+
+    .main-button:active {
         transform: scale(0.9);
     }
+
     /*social media icon hover actions*/
     #social-network i:hover {
         transform: scale(1.6);
@@ -299,12 +312,15 @@ header {
         transition: all 0.2s ease-in-out;
         background-color: #a9daf7;
     }
+
     #player-name-container button:hover {
         color: red;
     }
+
     #close-button:hover {
         background-color: red;
     }
+
     #close-button:active {
         transform: scale(0.9);
     }
