@@ -61,7 +61,7 @@ ul {
     border: none;
 }
 /*Rules/ How to play window styles*/
-#rules{
+#rules, #highscore-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,13 +177,15 @@ header {
     background-color: #fcb41a;
     padding: 5px 5px;
     font-size: 17px;
+    font-weight: 700;
+    color: blue;
 }
 
-.answer-button.correct {
+.correct {
     background-color: #026807;
 }
 
-.answer-button.wrong {
+.wrong {
     background-color: #f04646;
 }
 

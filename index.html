@@ -26,9 +26,9 @@
             <a href="index.html"><img id="hero-img" src="assets/img/logo-removebg-50.png"
                     alt="Pick your Poison no background logo 500px">
             </a>
-            <button onclick="runGame()" id="play-button" class="main-button">PLAY THE GAME</button>
+            <button onclick="runGame();" id="play-button" class="main-button">PLAY THE GAME</button>
             <button onclick="showRules();" id="how-to-play-button" class="main-button">HOW TO PLAY</button>
-            <button onclick="" class="main-button">SETTINGS</button>
+            <button onclick="showHighscores();" class="main-button">HIGHSCORES</button>
         </section>
         <div id="rules" class="hide">
             <ol>
@@ -40,6 +40,12 @@
                 <li>Once a question is answered, the timer stops and a next button appears.</li>
                 <li>Clicking the next button shows the next question and the timer continues.</li>
                 <li>Answer all 10 questions to complete the quiz and see your results.</li>
+            </ol>
+            <button onclick="hideRules();" id="close-button">CLOSE</button>
+        </div>
+        <div id="highscore-container" class="hide">
+            <ol>
+                <li>aa</li>
             </ol>
             <button onclick="hideRules();" id="close-button">CLOSE</button>
         </div>

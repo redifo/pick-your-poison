@@ -2,6 +2,7 @@ const playerNameContainer = document.getElementById("player-name-container")
 const gameContainer = document.getElementById("container-game")
 const feedback = document.getElementById("username-feedback");
 const questionElement = document.getElementById("question");
+const questionContainer = document.getElementById("question-container");
 const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
 const closeButton = document.getElementById("close-button");
@@ -9,7 +10,7 @@ const rules = document.getElementById("rules");
 const scoreElement = document.getElementById("score");
 const scoreContainer = document.getElementById("score-container");
 const timerContainer = document.getElementById("timer-container");
-
+const highscoresContainer = document.getElementById("highscore-container");
 const answerButtons = document.getElementsByClassName("answer-button");
 
 const answer1 = document.getElementById("answer1");
@@ -311,12 +312,12 @@ function CheckAnswer() {
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
 
     if (clickedAnswer === correctAnswerText) {
-
+        this.classList.add("correct")
         score = score + 10;
         ShowScore();
     }
     else {
-        console.log("yanlis amk")
+        this.classList.add("wrong")
     }
     // Disable all answer buttons to prevent further clicks
     for (let button of answerButtons) {
@@ -324,7 +325,8 @@ function CheckAnswer() {
     }
 }
 
-/*Next button code- increases question index and checks if there are any more questions if not displays reset button*/
+/*Next button code- increases question index and 
+checks if there are any more questions if not displays reset button*/
 nextButton.addEventListener("click", function () {
     // Increment question index
     questionIndex++;
@@ -332,7 +334,9 @@ nextButton.addEventListener("click", function () {
     /*limit the number of questions to be shown per game to 10*/
     if (questionIndex < 11) {
         // Display the next question
+        
         displayQuestion();
+
     } else {
         resetButton.classList.remove("hide")
 
@@ -343,10 +347,15 @@ nextButton.addEventListener("click", function () {
 resetButton.addEventListener("click", function () {
     questionIndex = 0;
     score = 0;
+    
 });
 
 function ShowScore() {
     scoreElement.textContent = score;
+}
+
+function showHighscores(){
+    highscoresContainer.classList.remove("hide")
 }
 
 function displayQuestion() {
@@ -359,18 +368,15 @@ function displayQuestion() {
     answer2.innerHTML = currentAnswers[1].text
     answer3.innerHTML = currentAnswers[2].text
     answer4.innerHTML = currentAnswers[3].text
-
+    /*renable buttons when displaying a new question
+    remove correct and wrong classes from buttons 
+    also adding an event listener to the buttons*/
     for (let i = 0; i < answerButtons.length; i++) {
-        if (currentAnswers[i].correct) {
-            console.log("Correct answer found!");
-        }
+        answerButtons[i].disabled = false;
+        answerButtons[i].classList.remove("correct")
+        answerButtons[i].classList.remove("wrong")
         answerButtons[i].addEventListener("click", CheckAnswer);
     }
-    //Reanable buttons after showing a new question
-    for (let button of answerButtons) {
-        button.disabled = false;
-    }
-
 }
 
 /**shuffles a given array */
@@ -383,5 +389,6 @@ function showRules() {
 }
 function hideRules() {
     rules.classList.add("hide")
+    highscoresContainer.classList.add("hide")
 }
 
