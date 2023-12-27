@@ -13,6 +13,9 @@ const timerContainer = document.getElementById("timer-container");
 const highscoresContainer = document.getElementById("highscore-container");
 const answerButtons = document.getElementsByClassName("answer-button");
 
+let timer; 
+let timeInSeconds = 0;
+
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
@@ -290,6 +293,7 @@ function checkName() {
         timerContainer.classList.remove("hide")
         displayQuestion();
         
+        
     }
     else if (playerName == "") {
         feedback.textContent = "Name field cannot be left blank";
@@ -315,9 +319,11 @@ function CheckAnswer() {
         this.classList.add("correct")
         score = score + 10;
         ShowScore();
+        stopTimer();
     }
     else {
         this.classList.add("wrong")
+        stopTimer();
     }
     // Disable all answer buttons to prevent further clicks
     for (let button of answerButtons) {
@@ -347,6 +353,9 @@ nextButton.addEventListener("click", function () {
 resetButton.addEventListener("click", function () {
     questionIndex = 0;
     score = 0;
+    displayQuestion();
+    resetButton.classList.add("hide")
+    ShowScore();
     
 });
 
@@ -377,11 +386,29 @@ function displayQuestion() {
         answerButtons[i].classList.remove("wrong")
         answerButtons[i].addEventListener("click", CheckAnswer);
     }
+    startTimer();
 }
 
 /**shuffles a given array */
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
+}
+
+function startTimer() {
+    timer = setInterval(function () {
+        timeInSeconds++;
+        document.getElementById('timer').innerText = timeInSeconds;
+    }, 1000); // Update the timer every second
+}
+
+function stopTimer() {
+    clearInterval(timer);
+}
+
+function resetTimer() {
+    stopTimer();
+    timeInSeconds = 0;
+    document.getElementById('timer').innerText = timeInSeconds;
 }
 
 function showRules() {
