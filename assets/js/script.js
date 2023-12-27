@@ -13,7 +13,7 @@ const timerContainer = document.getElementById("timer-container");
 const highscoresContainer = document.getElementById("highscore-container");
 const answerButtons = document.getElementsByClassName("answer-button");
 
-let timer; 
+let timer;
 let timeInSeconds = 0;
 
 const answer1 = document.getElementById("answer1");
@@ -292,8 +292,8 @@ function checkName() {
         scoreContainer.classList.remove("hide")
         timerContainer.classList.remove("hide")
         displayQuestion();
-        
-        
+
+
     }
     else if (playerName == "") {
         feedback.textContent = "Name field cannot be left blank";
@@ -313,6 +313,7 @@ function checkName() {
 function CheckAnswer() {
     let clickedAnswer = this.innerHTML;
     nextButton.classList.remove("hide")
+    /* learned from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find*/
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
 
     if (clickedAnswer === correctAnswerText) {
@@ -324,10 +325,16 @@ function CheckAnswer() {
     else {
         this.classList.add("wrong")
         stopTimer();
+        for (let i = 0; i < answerButtons.length; i++) {
+            if (answerButtons[i].innerHTML === correctAnswerText) {
+                answerButtons[i].classList.add("correct")
+            }
+        }
     }
     // Disable all answer buttons to prevent further clicks
     for (let button of answerButtons) {
         button.disabled = true;
+
     }
 }
 
@@ -340,7 +347,7 @@ nextButton.addEventListener("click", function () {
     /*limit the number of questions to be shown per game to 10*/
     if (questionIndex < 11) {
         // Display the next question
-        
+
         displayQuestion();
 
     } else {
@@ -356,16 +363,10 @@ resetButton.addEventListener("click", function () {
     displayQuestion();
     resetButton.classList.add("hide")
     ShowScore();
-    
+
 });
 
-function ShowScore() {
-    scoreElement.textContent = score;
-}
 
-function showHighscores(){
-    highscoresContainer.classList.remove("hide")
-}
 
 function displayQuestion() {
 
@@ -418,4 +419,10 @@ function hideRules() {
     rules.classList.add("hide")
     highscoresContainer.classList.add("hide")
 }
+function ShowScore() {
+    scoreElement.textContent = score;
+}
 
+function showHighscores() {
+    highscoresContainer.classList.remove("hide")
+}
