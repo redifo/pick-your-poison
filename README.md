@@ -1,39 +1,263 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pick your poison
 
-Welcome,
+![Pick your poison shown on a variety of screen sizes](documentation/img/mockup.webp)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The deployed site: [Pick your poison](redifoo.me/pick-your-poison/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## CONTENTS
 
-## Codeanywhere Reminders
+* [User Experience](#user-experience-ux)
+  * [User Stories](#user-stories)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+    * [The Home Page](#the-home-page)
+    * [The Categories Page](#the-game-page)
+    * [The Contact Page](#future-implementations)
+  * [Accessibility](#accessibility)
 
-`python3 -m http.server`
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* [Deployment & Local Development](#deployment--local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* [Testing](#testing)
+  * [Bugs](#Bugs)
+  
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
 
-`http_server`
+- - -
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience (UX)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### User Stories
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### First Time Visitor Goals
+Explore Cocktail Knowledge:
 
-To log into the Heroku toolbelt CLI:
+As a first-time visitor, users aim to participate in an online cocktail quiz to enhance their knowledge of cocktails and mixology.
+The user desires the flexibility to play the game at any time and from any location.
+They expect the website to be responsive, ensuring a seamless experience on various devices.
+The user prioritizes easy navigation to explore the quiz effortlessly.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Returning Visitor Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Returning visitors intend to choose a difficulty level based on their experience from previous visits.
+They seek the option to customize the difficulty level, providing a personalized and challenging experience.
 
----
+#### Frequent Visitor Goals
 
-Happy coding!
+Frequent visitors aim to continuously improve their cocktail knowledge by adjusting the difficulty level.
+They want the ability to log their high scores, enabling them to track and monitor their performance over time.
+- - -
+
+## Design
+
+### Colour Scheme
+#fcb41a (Gold):
+
+The gold hue, represented by #fcb41a, is prominently featured in the background such as the body of the page and background color of buttons, providing a warm and inviting aesthetic. 
+
+#026807 (Dark Green):
+
+It serves as the background color for the main menu buttons, score and timer font colors and footer icon and text colors. It complements the gold color, creating a visually pleasing contrast.
+
+#f04646 (Crimson Red):
+It is employed in hover and active states, adding a dynamic and energetic flair to interactive elements. This vivid red creates a visually striking effect and draws attention to user actions.
+
+Blue:
+
+A generic blue color is used for the text color of the answer buttons, offering a clear and readable contrast against the background.
+
+#a9daf7 (Light Blue):
+
+Light blue, denoted by #a9daf7, is utilized in hover states to create a subtle and pleasing transition effect.
+
+White:
+
+White serves as the background color for the questions container, rules window and username inquiry containers ensuring a clean and minimalist backdrop. It promotes readability and maintains a modern and fresh appearance.
+
+This carefully chosen color scheme aims to create a visually harmonious and user-friendly environment. The combination of warm gold, deep green, and vibrant red, along with strategic use of blue and light blue, contributes to a balanced and aesthetically pleasing design. Overall these colors reflects the website's theme: colorful world of cocktails.
+
+  ![ Color Scheme](documentation/img/colour-scheme.png)
+
+### Typography
+
+Google Fonts was used to import the chosen fonts for use in the site.
+
+![ Font Example](documentation/img/worksans.png)
+
+* For the entire website I have used the google font Work sans. Work Sans provides a modern and clean aesthetic with its sans-serif style. Sans-serif fonts are often chosen for their contemporary look and improved readability on digital screens. 
+
+### Imagery
+
+The imagery was designed to highlight the name of the webiste through a vibrant color scheme by Dall-e 3 using the following prompts:
+
+* Create a logo for a cocktails quiz game site called pick your poison with vibant colors.
+
+### Wireframes
+
+Wireframes were created for mobile using balsamiq. For other devices wireframes were not seen as a necessity.
+
+![Home Page](documentation/wireframes/home.png)
+![Game Page](documentation/wireframes/game.png)
+
+### Features
+#### Website Structure
+
+The website is comprised of a home page and a Game page.
+
+All Pages on the website are responsive and include:
+
+* A favicon in the browser tab.
+
+![favicon](documentation/img/favicon.png)
+
+* The logo of the website at the center of every page. The logo also acts as a link back to the home page.
+
+![Title](documentation/img/title.png)
+
+* The footer appears at the bottom of every page. Social media icons in the footer connect users with the developer's Instagram, GitHub, and LinkedIn profiles.
+![Footer image](documentation/img/footer.png)
+
+
+#### The Home Page
+
+The main page features a hero logo and prominent buttons to play the game, access instructions on how to play and show highcores.
+Upon clicking "Play the Game" users are directed to the game page. 
+Upon clicking "How to play" users are shown the instructions to the game page (Clear rules are provided to guide users on answering questions, displaying scores, and navigating the quiz.) on a popup window with a close button at the bottom. 
+Upon clicking "Highscores" users are shown a popup window with their past highscores with a close button at the bottom. 
+
+![Home page](documentation/img/home-page.png)
+
+#### The Game Page
+The game page includes a header displaying the player's score and timer.
+A central container presents questions and answer options.
+Interactive controls such as "Next" and "Reset" buttons facilitate smooth progression through the quiz.
+
+![Game page](documentation/img/game-page.png)
+
+#### Future Implementations
+
+In future implementations I would like to:
+
+1. 
+
+### Accessibility
+
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
+
+* Giving all buttons a hover state to enhance the user experience by making the navigation elements responsive, ensuring that users are aware of clickable elements and encouraging engagement with the website's content.
+* Choosing a sans serif font for the website - sans serif fonts are known by their easy readibility.
+* Making sure that there is sufficient colour contrast.
+
+- - -
+
+## Technologies Used
+
+### Languages Used
+
+HTML, CSS, js
+
+### Frameworks, Libraries & Programs Used
+
+* [Balsamiq](https://balsamiq.com/) - Used to create wireframes.
+
+* [Bing.com Dall-e](https://www.bing.com/images/create/?ref=hn) - Used to create all the images within the website.
+
+* [Git](https://git-scm.com/) - For version control.
+
+* [Github](https://github.com/) - To save and store the files for the website.
+
+* [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+
+* [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+* [Favicon.io](https://favicon.io/) To create favicon from the logo created by Dall-e 3.
+
+* [Canva.com](https://www.canva.com/) To create a mockup of the website imaage on different platforms/devices.
+  
+* [convertio.co](https://convertio.co) To covert images into webp format.
+
+* [redketchup.io](https://redketchup.io/bulk-image-resizer) To resize the images into same size.
+
+* [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
+
+- - -
+
+## Deployment & Local Development
+
+The site is deployed using GitHub Pages: https://redifo.github.io/ci_pp1/
+
+To Deploy the site using GitHub Pages follow these steps:
+
+1. Log in or sign up on GitHub.
+2. Navigate to the project repository at [redifo/pick-your-poison]([https://github.com/redifo/pick-your-poison)
+3. Click on the "Settings" button.
+4. Choose "Pages" from the left-hand menu.
+5. In the source dropdown, select the main branch and click "Save."
+6. Your site is now deployed, but please note that it might take a few minutes before it becomes live.
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in or sign up on GitHub.
+2. Visit the project repository at  [redifo/pick-your-poison](https://github.com/redifo/pick-your-poison)
+3. Click the "Fork" button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in or sign up on GitHub.
+2. Go to the project repository at [redifo/pick-your-poison](https://github.com/redifo/pick-your-poison)
+3. Click on the "Code" button, choose whether to clone with HTTPS, SSH, or GitHub CLI, and copy the provided link.
+4. Open the terminal in your code editor, navigate to the desired location for the cloned directory.
+5. Type 'git clone' in the terminal and paste the link from step 3. Press enter.
+
+## Testing
+
+Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
+
+### Bugs 
+
+
+
+## Credits
+
+### Code Used
+
+* The structure for the code was inspired by the youtube tutorials lited below: 
+[Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
+[How To Make Quiz App Using JavaScript | Build Quiz App With HTML CSS & JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8)
+
+### Content
+
+All quiz questions content for the site,  were written by me and chatGPT (3.5). 
+
+Readme.md and Testing.md write structure was written by using my past project as a referance (milestone project 1).
+
+### Media
+THe logo was generated by using Dall-e 3.
+
+### Acknowledgments
+
+I would like to acknowledge the following people:
+
+* My girlfriend Ege Tek for her support.
+
+* My code institute mentor Jubril.
