@@ -295,13 +295,18 @@ header {
 /*media querry:mouse enabled devices only*/
 @media (hover: hover) {
 
-    .main-button,
-    .home-button:hover {
+    .main-button:hover
+     {
         background-color: #f04646;
         color: white;
         box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
     }
 
+    .home-button:hover {
+        background-color: #f04646;
+        color: white;
+        box-shadow: 0 8px 8px 0 rgba(241, 46, 46, 0.3);
+    }
     #reset-button:hover {
         background-color: #f04646;
         color: white;

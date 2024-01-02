@@ -1,22 +1,22 @@
-const playerNameContainer = document.getElementById("player-name-container")
-const gameContainer = document.getElementById("container-game")
+const playerNameContainer = document.getElementById("player-name-container");
+const gameContainer = document.getElementById("container-game");
 const feedback = document.getElementById("username-feedback");
 const questionElement = document.getElementById("question");
 const questionContainer = document.getElementById("question-container");
 const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
-const closeButton = document.getElementById("close-button");
+
 const rules = document.getElementById("rules");
 const scoreElement = document.getElementById("score");
 const scoreContainer = document.getElementById("score-container");
 const timerContainer = document.getElementById("timer-container");
 
-const timerFinish = document.getElementById("timer-container-finish")
-const scoreFinish = document.getElementById("score-container-finish")
-const nameFinish = document.getElementById("name-container-finish")
-const timerFinishSpan = document.getElementById("timer-finish")
-const scoreFinishSpan = document.getElementById("score-finish")
-const nameFinishSpan = document.getElementById("name-finish")
+const timerFinish = document.getElementById("timer-container-finish");
+const scoreFinish = document.getElementById("score-container-finish");
+const nameFinish = document.getElementById("name-container-finish");
+const timerFinishSpan = document.getElementById("timer-finish");
+const scoreFinishSpan = document.getElementById("score-finish");
+const nameFinishSpan = document.getElementById("name-finish");
 
 
 const answerButtons = document.getElementsByClassName("answer-button");
@@ -260,7 +260,7 @@ const questions = [
         ]
     }
 
-]
+];
 
 /** Prevent accidental click on main menu/home button resetting 
  * the game with an alert on screen
@@ -276,7 +276,7 @@ function preventHome() {
         confirmButtonText: 'Yes, go to Home Page!'
     }).then((result) => {
         if (result.isConfirmed) {
-            
+
             window.location.href = 'index.html';
         }
     });
@@ -290,19 +290,21 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         Swal.fire({
-        title: 'Are you sure?',
-        text: 'Do you want to go to the Home Page? Your game score will reset.',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#026807',
-        cancelButtonColor: '#f04646',
-        confirmButtonText: 'Yes, go to Home Page!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            
-            window.location.href = 'index.html';
-        }
-})})});
+            title: 'Are you sure?',
+            text: 'Do you want to go to the Home Page? Your game score will reset.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#026807',
+            cancelButtonColor: '#f04646',
+            confirmButtonText: 'Yes, go to Home Page!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                window.location.href = 'index.html';
+            }
+        });
+    });
+});
 
 /** start/play game button- 
  * redirects to game page
@@ -322,11 +324,11 @@ function checkName() {
     let playerNameNotTrim = document.getElementById("player-name-input").value;
     if (playerName.length >= 4) {
         shuffle(questions);
-        playerNameContainer.classList.add("hide")
-        gameContainer.classList.remove("hide")
-        scoreContainer.classList.remove("hide")
-        timerContainer.classList.remove("hide")
-        questionIndexElementContainer.classList.remove("hide")
+        playerNameContainer.classList.add("hide");
+        gameContainer.classList.remove("hide");
+        scoreContainer.classList.remove("hide");
+        timerContainer.classList.remove("hide");
+        questionIndexElementContainer.classList.remove("hide");
         displayQuestion();
         return playerNameNotTrim;
 
@@ -348,22 +350,22 @@ function checkName() {
  */
 function CheckAnswer() {
     let clickedAnswer = this.innerHTML;
-    nextButton.classList.remove("hide")
+    nextButton.classList.remove("hide");
     /* learned from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find*/
     let correctAnswerText = questions[questionIndex].answers.find(answer => answer.correct).text;
 
     if (clickedAnswer === correctAnswerText) {
-        this.classList.add("correct")
+        this.classList.add("correct");
         score = score + 10;
         ShowScore();
         stopTimer();
     }
     else {
-        this.classList.add("wrong")
+        this.classList.add("wrong");
         stopTimer();
         for (let i = 0; i < answerButtons.length; i++) {
             if (answerButtons[i].innerHTML === correctAnswerText) {
-                answerButtons[i].classList.add("correct")
+                answerButtons[i].classList.add("correct");
             }
         }
     }
@@ -388,17 +390,17 @@ nextButton.addEventListener("click", function () {
         displayQuestion();
 
     } else {
-        resetButton.classList.remove("hide")
-        questionContainer.classList.add("hide")
+        resetButton.classList.remove("hide");
+        questionContainer.classList.add("hide");
         timerFinishSpan.textContent = timeInSeconds;
         nameFinishSpan.textContent = checkName();
         scoreFinishSpan.textContent = score;
-        timerFinish.classList.remove("hide")
-        nameFinish.classList.remove("hide")
-        scoreFinish.classList.remove("hide")
-        timerContainer.classList.add("hide")
-        scoreContainer.classList.add("hide")
-        questionIndexElementContainer.classList.add("hide")
+        timerFinish.classList.remove("hide");
+        nameFinish.classList.remove("hide");
+        scoreFinish.classList.remove("hide");
+        timerContainer.classList.add("hide");
+        scoreContainer.classList.add("hide");
+        questionIndexElementContainer.classList.add("hide");
     }
 });
 
@@ -407,14 +409,14 @@ resetButton.addEventListener("click", function () {
     questionIndex = 0;
     score = 0;
     displayQuestion();
-    resetButton.classList.add("hide")
+    resetButton.classList.add("hide");
     ShowScore();
     resetTimer();
     startTimer();
-    timerFinish.classList.add("hide")
-    nameFinish.classList.add("hide")
-    scoreFinish.classList.add("hide")
-    questionContainer.classList.remove("hide")
+    timerFinish.classList.add("hide");
+    nameFinish.classList.add("hide");
+    scoreFinish.classList.add("hide");
+    questionContainer.classList.remove("hide");
 
 });
 
@@ -424,21 +426,21 @@ resetButton.addEventListener("click", function () {
  * and handles button states*/
 function displayQuestion() {
 
-    let curretQuestionn = questions[questionIndex]
-    questionElement.innerHTML = curretQuestionn.question
-    let currentAnswers = questions[questionIndex].answers
-    shuffle(currentAnswers)
-    answer1.innerHTML = currentAnswers[0].text
-    answer2.innerHTML = currentAnswers[1].text
-    answer3.innerHTML = currentAnswers[2].text
-    answer4.innerHTML = currentAnswers[3].text
+    let curretQuestionn = questions[questionIndex];
+    questionElement.innerHTML = curretQuestionn.question;
+    let currentAnswers = questions[questionIndex].answers;
+    shuffle(currentAnswers);
+    answer1.innerHTML = currentAnswers[0].text;
+    answer2.innerHTML = currentAnswers[1].text;
+    answer3.innerHTML = currentAnswers[2].text;
+    answer4.innerHTML = currentAnswers[3].text;
     /*renable buttons when displaying a new question
     remove correct and wrong classes from buttons 
     also adding an event listener to the buttons*/
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].disabled = false;
-        answerButtons[i].classList.remove("correct")
-        answerButtons[i].classList.remove("wrong")
+        answerButtons[i].classList.remove("correct");
+        answerButtons[i].classList.remove("wrong");
         answerButtons[i].addEventListener("click", CheckAnswer);
     }
     startTimer();
@@ -472,13 +474,13 @@ function resetTimer() {
 
 /** Shows the game rules*/
 function showRules() {
-    rules.classList.remove("hide")
+    rules.classList.remove("hide");
 }
 
 /** Hides the game rules*/
 function hideRules() {
-    rules.classList.add("hide")
-    
+    rules.classList.add("hide");
+
 }
 
 /** Displays the player's score*/
