@@ -6,7 +6,7 @@ const questionContainer = document.getElementById("question-container");
 const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
 
-const rules = document.getElementById("rules");
+
 const scoreElement = document.getElementById("score");
 const scoreContainer = document.getElementById("score-container");
 const timerContainer = document.getElementById("timer-container");
@@ -306,15 +306,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/** start/play game button- 
- * redirects to game page
- * */
-function runGame() {
-    // Redirect to the game.html page
-    window.location.href = "game.html";
-
-}
-
 /** Checks player name for playername length if valid 
  * shuffle the questions and call display question function
  * shows questions hides name box
@@ -342,6 +333,7 @@ function checkName() {
         feedback.style.color = "red";
     }
 }
+
 /**Retrieves the clicked answer
  * Reveals Next Button
  * Increases the score by 10 if the answer is correct.
@@ -472,16 +464,7 @@ function resetTimer() {
     document.getElementById('timer').innerText = timeInSeconds;
 }
 
-/** Shows the game rules*/
-function showRules() {
-    rules.classList.remove("hide");
-}
 
-/** Hides the game rules*/
-function hideRules() {
-    rules.classList.add("hide");
-
-}
 
 /** Displays the player's score*/
 function ShowScore() {
