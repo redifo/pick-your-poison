@@ -8,8 +8,8 @@ function showRules() {
 /** Hides the game rules*/
 function hideRules() {
     rules.classList.add("hide");
-
 }
+
 /** start/play game button- 
  * redirects to game page
  * */

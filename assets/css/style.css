@@ -204,6 +204,7 @@ header {
 
 .correct {
     background-color: #026807;
+    color: white;
 }
 
 .wrong {

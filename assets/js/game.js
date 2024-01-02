@@ -311,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * shows questions hides name box
  * */
 function checkName() {
+    //trim the spaces in the input field so that user cannot input empty spaces
     let playerName = document.getElementById("player-name-input").value.trim();
     let playerNameNotTrim = document.getElementById("player-name-input").value;
     if (playerName.length >= 4) {
@@ -404,11 +405,15 @@ resetButton.addEventListener("click", function () {
     resetButton.classList.add("hide");
     ShowScore();
     resetTimer();
-    startTimer();
+    
     timerFinish.classList.add("hide");
     nameFinish.classList.add("hide");
     scoreFinish.classList.add("hide");
     questionContainer.classList.remove("hide");
+    timerContainer.classList.remove("hide");
+    scoreContainer.classList.remove("hide");
+    questionIndexElementContainer.classList.remove("hide");
+    startTimer();
 
 });
 
