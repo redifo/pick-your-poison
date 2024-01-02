@@ -1,6 +1,6 @@
 # Pick Your Poison -  Testing
 
-![Website on different screen sizes](documentation/img/mockup.webp)
+![Website on different screen sizes](documentation/responsive.webp)
 
 Deployed website: [Pick Your Poison](https://redifoo.me/pick-your-poison/)
 
@@ -10,7 +10,7 @@ Deployed website: [Pick Your Poison](https://redifoo.me/pick-your-poison/)
 
 * [AUTOMATED TESTING](#automated-testing)
   * [W3C Validator](#w3c-validator)
-  * Javascript
+  * [Jshint](#jshint)
   * [Lighthouse](#lighthouse)
 * [MANUAL TESTING](#manual-testing)
 
@@ -24,19 +24,22 @@ Check each page for responsiveness. Ensure a seamless user experience on various
 
 ### W3C Validator
 
-The w3 html and jigsaw css validator has been used to make sure the code does not contain any errors. the results shown below are the results of the final tests. During the development of the code this validator has been used multiple times but the results were not recorded before the final testings. All errors and warnings have been fixed.
+The w3 html and jigsaw css validators have been used to make sure the code does not contain any errors. The results shown below are the results of the final tests. During the development of the code this validator has been used multiple times but the results were not recorded before the testing file was created. There was only 2 warnings and they have been fixed before the testing file was created.
 
  * [W3C](https://validator.w3.org/) 
-
   
- ![index.html](documentation/testing/)  
+ ![index.html](documentation/auto-test/w3-html.png)  
 
- ![game.html](documentation/testing/)    
+ ![game.html](documentation/auto-test/w3-html.png)    
 
- ![style.css](documentation/testing/jigsaw-css.png) 
+ ![style.css](documentation/auto-test/jigsaw-css.png) 
 
 - - -
+### Jshint
 
+![home.js](documentation/auto-test/jshint-home.PNG) 
+
+![game.js](documentation/auto-test/jshint-game.PNG) 
 ### Lighthouse
 
 The website has been tested by google chrome's lighthouse report and the results are shown below. 

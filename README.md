@@ -245,6 +245,7 @@ Please refer to [TEST.md](TEST.md) file for all testing carried out.
 ### Bugs 
 
 The main menu button was changing location when tried to be clicked, i could not locate the exact problem but after deleting and rewriting the css for the main menu button the problem resolved.
+
 ![Bug 1](documentation/bug1.png)
 
 ## Credits
