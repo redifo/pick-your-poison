@@ -161,7 +161,7 @@ Interactive controls such as "Next" and "Play Again" buttons facilitate smooth p
 
 In future implementations I would like to:
 
-1. Add highscores page, can be implemented by using a cloud based database to store the player data. Seeing your score against other players would make the game more fun.
+1. Add high scores page, can be implemented by using a cloud based database to store the player data. Seeing your score against other players would make the game more fun.
 
 2. Add new game mode. The game mode would show the photo and the name of the cocktail and would require the user to select the right ingredients from a pool of options. Could better train cocktail enthusiasts.
 
@@ -244,7 +244,8 @@ Please refer to [TEST.md](TEST.md) file for all testing carried out.
 
 ### Bugs 
 
-
+The main menu button was changing location when tried to be clicked, i could not locate the exact problem but after deleting and rewriting the css for the main menu button the problem resolved.
+![Bug 1](documentation/bug1.png)
 
 ## Credits
 
