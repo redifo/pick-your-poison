@@ -56,13 +56,11 @@ The user prioritizes easy navigation to explore the quiz effortlessly.
 
 #### Returning Visitor Goals
 
-Returning visitors intend to choose a difficulty level based on their experience from previous visits.
-They seek the option to customize the difficulty level, providing a personalized and challenging experience.
+Returning visitors aim to continuously improve their cocktail knowledge by trying to improve their score and time.
 
 #### Frequent Visitor Goals
 
-Frequent visitors aim to continuously improve their cocktail knowledge by adjusting the difficulty level.
-They want the ability to log their high scores, enabling them to track and monitor their performance over time.
+Frequent visitors aim to continuously improve their cocktail knowledge by trying to improve their score and time.
 - - -
 
 ## Design
@@ -107,7 +105,7 @@ Google Fonts was used to import the chosen fonts for use in the site.
 
 The imagery was designed to highlight the name of the webiste through a vibrant color scheme by Dall-e 3 using the following prompts:
 
-* Create a logo for a cocktails quiz game site called pick your poison with vibant colors.
+* Create a logo for a cocktails quiz game site called pick your poison with vibrant colors.
 
 ### Wireframes
 
@@ -132,6 +130,7 @@ All Pages on the website are responsive and include:
 ![Title](documentation/title.png)
 
 * The footer appears at the bottom of every page. Social media icons in the footer connect users with the developer's Instagram, GitHub, and LinkedIn profiles.
+
 ![Footer image](documentation/footer.png)
 
 
