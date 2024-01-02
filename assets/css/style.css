@@ -53,7 +53,7 @@ ul {
     padding: 10px 17px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #026807;
+    background-color: #024706;
     color: #dcf8de;
     font-size: 1.5rem;
     font-weight: bold;
@@ -101,7 +101,7 @@ ul {
 /*footer styles*/
 footer p {
     text-align: center;
-    color: #026807;
+    color: #024706;
     font-weight: 600;
     font-size: 16px;
 }
@@ -115,7 +115,7 @@ footer p {
 #social-network i {
     font-size: 220%;
     padding: 5%;
-    color: #026807;
+    color: #024706;
 }
 
 /*Game page styles*/
@@ -133,7 +133,7 @@ header {
 #score-container,
 #timer-container,
 #question-index-container {
-    color: #026807;
+    color: #024706;
     font-size: 30px;
     font-weight: 700;
     margin-left: 15px;
@@ -163,7 +163,7 @@ header {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     padding: 12px 24px;
-    background-color: #026807;
+    background-color: #024706;
     color: #dcf8de;
     font-size: 1.5rem;
     font-weight: bold;
@@ -203,7 +203,7 @@ header {
 }
 
 .correct {
-    background-color: #026807;
+    background-color: #024706;
     color: white;
 }
 
@@ -221,7 +221,7 @@ header {
 
 #reset-button {
     border-radius: 15px;
-    background-color: #026807;
+    background-color: #024706;
     padding: 5px 15px;
     font-size: 20px;
     color: white;
@@ -277,7 +277,7 @@ header {
 }
 
 #player-name-container button:active {
-    background-color: #026807;
+    background-color: #024706;
 
 }
 
