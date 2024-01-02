@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <!-- Header containing the logo -->
+    <!-- Header containing the logo, score, timer and question index -->
     <header>
         <div class="header-content">
             <div id="score-container" class="hide">
@@ -34,6 +34,7 @@
                 Question: <span id="question-index">0</span> / 10
             </div>
         </div>
+        <!--Logo (hero) image-->
         <a id="nav-image-a" href="index.html"><img id="nav-img" src="assets/img/logo-removebg30.png"
                 alt="Pick your Poison, got to home page link - no background logo 300px">
         </a>
@@ -42,8 +43,9 @@
         </div>
 
     </header>
-    <!-- Main section for showing the player name input field and questions and anwers-->
+    <!-- Main section for showing the player name input field, questions, answers and controls-->
     <main>
+        <!--player name inquiry window-->
         <div id="player-name-container">
             <h2>Enter Your Name</h2>
             <input type="text" id="player-name-input">
@@ -52,6 +54,7 @@
             </button>
             <span id="username-feedback"></span>
         </div>
+        <!--Game container (Contains, end game stats, questions, answers and controls)-->
         <div id="container-game" class="hide">
             <div id="name-container-finish" class="hide">
                 Name: <span id="name-finish"></span>
@@ -79,7 +82,7 @@
             </div>
         </div>
     </main>
-
+    <!-- Footer section (Contains Social meida links)-->
     <footer>
 
         <ul id="social-network">
