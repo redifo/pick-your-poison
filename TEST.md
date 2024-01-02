@@ -93,9 +93,10 @@ Each device tested the site using the following browsers:
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | direct to home page | pass |
 | All buttons and navigation menu items and social media icons- hover effect | Change colour when hovered on | Hover over each button on the page | Each button displayed the correct styling when hovered over | pass |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| Game Rules Display | Show the game rules when the "Rules" button is clicked | Clicked the "Rules" button | Game rules displayed | Pass |
+| Game Rules Hide | Hide the game rules when the "Close" button is clicked | Clicked the "Close" button | Game rules hidden | Pass |
+| Start/Play Game Button | Redirects to the game page | Clicked the "Start Game" button | Redirected to the game page | Pass |
+
 
 `Game Page`
 
@@ -106,12 +107,12 @@ Each device tested the site using the following browsers:
 | Player Name Validation | Display an error message if the name is less than 4 characters or empty. |  Entered names of various lengths and clicked start button| Error messages displayed correctly | Pass |
 | Question Display | Display the current question and answer choices after shuffling. | Clicked the "Next" button to navigate through questions. | Questions and choices displayed correctly and shuffled | Pass |
 | Answer Validation | Highlight correct and incorrect answers, disable further clicks. | Clicked on answer choices for various questions. | Correct answers highlighted, buttons disabled | Pass |
-| Next Button Functionality   | Increment question index, show the next question, and hide the button if no more questions. | Clicked the "Next" button after answering questions.       | Question index incremented, next question displayed | Pass      |
-| Reset Button Functionality  | Reset question index, score, and timer, display the first question. | Clicked the "Reset" button after completing the game.      | Game reset, first question displayed  | Pass      |
-| Timer Functionality         | Start, stop, and reset the timer as expected.                 | Observed timer behavior during gameplay and resets.      | Timer starts, stops, and resets correctly | Pass      |
-| Game Completion Display     | Show the final score, player name, and time after completing the game. | Completed the game by answering all questions.             | Final score, player name, and time displayed | Pass      |
-| Prevent Home Functionality  | Display a confirmation alert before navigating to the home page. | Clicked on the home button during gameplay.               | Confirmation alert displayed, navigation prevented | Pass      |
-| Accidental Click Prevention | Display a confirmation alert before navigating to the home page. | Clicked on the game logo during gameplay.                | Confirmation alert displayed, navigation prevented | Pass      |
+| Next Button Functionality | Increment question index, show the next question, and hide the button if no more questions. | Clicked the "Next" button after answering questions. | Question index incremented, next question displayed | Pass  |
+| Reset Button Functionality  | Reset question index, score, and timer, display the first question. | Clicked the "Reset" button after completing the game. | Game reset, first question displayed | Pass |
+| Timer Functionality | Start, stop, and reset the timer as expected. | Observed timer behavior during gameplay and resets. | Timer starts, stops, and resets correctly | Pass |
+| Game Completion Display | Show the final score, player name, and time after completing the game. | Completed the game by answering all questions. | Final score, player name, and time displayed | Pass |
+| Prevent Home Functionality  | Display a confirmation alert before navigating to the home page. | Clicked on the home button during gameplay. | Confirmation alert displayed, navigation prevented | Pass |
+| Accidental Click Prevention | Display a confirmation alert before navigating to the home page. | Clicked on the game logo during gameplay. | Confirmation alert displayed, navigation prevented | Pass |
 
 
 
