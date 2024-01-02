@@ -1,6 +1,6 @@
 # Pick your poison
 
-![Pick your poison shown on a variety of screen sizes](documentation/img/mockup.webp)
+![Pick your poison shown on a variety of screen sizes](documentation/responsive.webp)
 
 The deployed site: [Pick your poison](redifoo.me/pick-your-poison/)
 
@@ -93,13 +93,13 @@ White serves as the background color for the questions container, rules window a
 
 This carefully chosen color scheme aims to create a visually harmonious and user-friendly environment. The combination of warm gold, deep green, and vibrant red, along with strategic use of blue and light blue, contributes to a balanced and aesthetically pleasing design. Overall these colors reflects the website's theme: colorful world of cocktails.
 
-  ![ Color Scheme](documentation/img/colour-scheme.png)
+  ![ Color Scheme](documentation/color-palatte.png)
 
 ### Typography
 
 Google Fonts was used to import the chosen fonts for use in the site.
 
-![ Font Example](documentation/img/worksans.png)
+![ Font Example](documentation/worksans.png)
 
 * For the entire website I have used the google font Work sans. Work Sans provides a modern and clean aesthetic with its sans-serif style. Sans-serif fonts are often chosen for their contemporary look and improved readability on digital screens. 
 
@@ -125,37 +125,46 @@ All Pages on the website are responsive and include:
 
 * A favicon in the browser tab.
 
-![favicon](documentation/img/favicon.png)
+![favicon](documentation/favicon.png)
 
 * The logo of the website at the center of every page. The logo also acts as a link back to the home page.
 
-![Title](documentation/img/title.png)
+![Title](documentation/title.png)
 
 * The footer appears at the bottom of every page. Social media icons in the footer connect users with the developer's Instagram, GitHub, and LinkedIn profiles.
-![Footer image](documentation/img/footer.png)
+![Footer image](documentation/footer.png)
 
 
 #### The Home Page
 
 The main page features a hero logo and prominent buttons to play the game, access instructions on how to play and show highcores.
-Upon clicking "Play the Game" users are directed to the game page. 
-Upon clicking "How to play" users are shown the instructions to the game page (Clear rules are provided to guide users on answering questions, displaying scores, and navigating the quiz.) on a popup window with a close button at the bottom. 
-Upon clicking "Highscores" users are shown a popup window with their past highscores with a close button at the bottom. 
 
-![Home page](documentation/img/home-page.png)
+![Home page](documentation/home-page.png)
+
+Upon clicking "Play the Game" users are directed to the game page where they need to fill in the name field before starting the game. The name field cannot be left blank or cannot be shorter than 4 characters.
+
+![Name Inquiry Field](documentation/name-field.png)
+
+Upon clicking "How to play" users are shown the instructions to the game page (Clear rules are provided to guide users on answering questions, displaying scores, and navigating the quiz.) on a popup window with a close button at the bottom. 
+
+![How to Play window](documentation/how-to-play.png)
 
 #### The Game Page
 The game page includes a header displaying the player's score and timer.
 A central container presents questions and answer options.
-Interactive controls such as "Next" and "Reset" buttons facilitate smooth progression through the quiz.
+Interactive controls such as "Next" and "Play Again" buttons facilitate smooth progression through the quiz.
 
-![Game page](documentation/img/game-page.png)
+![Game page](documentation/game-page.png)
+
+![Game end](documentation/game-end.png)
 
 #### Future Implementations
 
 In future implementations I would like to:
 
-1. 
+1. Add highcores page, can be implemented by using a cloud based database to store the player data. Seeing your score against other players would make the game more fun.
+
+2. Add new game mode. The game mode would show the photo and the name of the coctail and would require the user to select the right ingredients from a pool of options. Could better train coctail enthusiasts.
 
 ### Accessibility
 
