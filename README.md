@@ -111,7 +111,11 @@ The imagery was designed to highlight the name of the website through a vibrant 
 
 Wireframes were created for mobile using balsamiq. For other devices wireframes were not seen as a necessity.
 
+Home Page
+
 ![Home Page](documentation/wireframes/home.png)
+
+Game Page
 ![Game Page](documentation/wireframes/game.png)
 
 ### Features
