@@ -116,6 +116,7 @@ Home Page
 ![Home Page](documentation/wireframes/home.png)
 
 Game Page
+
 ![Game Page](documentation/wireframes/game.png)
 
 ### Features
