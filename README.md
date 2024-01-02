@@ -133,6 +133,7 @@ All Pages on the website are responsive and include:
 
 ![Footer image](documentation/footer.PNG)
 
+All buttons and icons have hover and action styles to proide feedback to the user.
 
 #### The Home Page
 
@@ -151,9 +152,11 @@ Upon clicking "How to play" users are shown the instructions to the game page (C
 #### The Game Page
 The game page includes a header displaying the player's score and timer.
 A central container presents questions and answer options.
-Interactive controls such as "Next" and "Play Again" buttons facilitate smooth progression through the quiz.
+Interactive controls such as "Next" and "Play Again" buttons facilitate smooth progression through the quiz. Answer buttons change colour to indicate the correct (green) and wrong (red) answers.
 
 ![Game page](documentation/game-page.png)
+
+When all 10 questions are answered your score time and name is displayed. 
 
 ![Game end](documentation/game-end.PNG)
 
