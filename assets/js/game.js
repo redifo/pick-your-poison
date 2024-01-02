@@ -413,8 +413,7 @@ resetButton.addEventListener("click", function () {
     timerContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
     questionIndexElementContainer.classList.remove("hide");
-    startTimer();
-
+    
 });
 
 

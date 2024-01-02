@@ -4,6 +4,9 @@
 
 The deployed site: [Pick your poison](redifoo.me/pick-your-poison/)
 
+Pick your poison, cocktails learning quiz game website. 
+Welcome to "Pick Your Poison," an engaging cocktail learning quiz game designed to elevate your mixology knowledge while having fun! This interactive web application combines the thrill of a quiz game with the sophistication of cocktail culture, making learning both enjoyable and informative.
+
 ## CONTENTS
 
 * [User Experience](#user-experience-ux)
