@@ -247,9 +247,10 @@ header {
 }
 
 /*header o top of player ame field*/
-#player-name-container h2 {
+#player-name-container label {
     font-size: 2rem;
     margin-bottom: 5px;
+    font-weight: 500;
 }
 
 #player-name-container input {
