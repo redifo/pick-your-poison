@@ -39,7 +39,7 @@ The w3 html and jigsaw css validators have been used to make sure the code does 
 - - -
 ### Jshint
 
-The home.js file testing shows 3 unsused variables but these variables are the functions and they are only called within the buttons on the home page, therefore it is normal to get these messages. 
+The home.js file testing shows 3 unused variables but these variables are the functions and they are only called within the buttons on the home page, therefore it is normal to get these messages. 
 
 ![home.js](documentation/auto-test/jshint-home.PNG) 
 

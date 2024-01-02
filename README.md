@@ -70,7 +70,7 @@ Frequent visitors aim to continuously improve their cocktail knowledge by trying
 
 The gold hue, represented by #fcb41a, is prominently featured in the background such as the body of the page and background color of buttons, providing a warm and inviting aesthetic. 
 
-#026807 (Dark Green):
+#024706 (Dark Green):
 
 It serves as the background color for the main menu buttons, score and timer font colors and footer icon and text colors. It complements the gold color, creating a visually pleasing contrast.
 
@@ -202,6 +202,8 @@ HTML, CSS, js
 * [convertio.co](https://convertio.co) To covert images into webp format.
 
 * [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
+
+* [sweetalert2](https://sweetalert2.github.io/) Used to display the warning when clicked on the main menu during game.
 
 - - -
 
