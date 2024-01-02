@@ -91,7 +91,7 @@ White serves as the background color for the questions container, rules window a
 
 This carefully chosen color scheme aims to create a visually harmonious and user-friendly environment. The combination of warm gold, deep green, and vibrant red, along with strategic use of blue and light blue, contributes to a balanced and aesthetically pleasing design. Overall these colors reflects the website's theme: colorful world of cocktails.
 
-  ![ Color Scheme](documentation/color-palatte.png)
+  ![ Color Scheme](documentation/color-palatte.PNG)
 
 ### Typography
 
@@ -131,14 +131,14 @@ All Pages on the website are responsive and include:
 
 * The footer appears at the bottom of every page. Social media icons in the footer connect users with the developer's Instagram, GitHub, and LinkedIn profiles.
 
-![Footer image](documentation/footer.png)
+![Footer image](documentation/footer.PNG)
 
 
 #### The Home Page
 
 The main page features a hero logo and prominent buttons to play the game, access instructions on how to play and show highcores.
 
-![Home page](documentation/home-page.png)
+![Home page](documentation/home-page.PNG)
 
 Upon clicking "Play the Game" users are directed to the game page where they need to fill in the name field before starting the game. The name field cannot be left blank or cannot be shorter than 4 characters.
 
@@ -155,7 +155,7 @@ Interactive controls such as "Next" and "Play Again" buttons facilitate smooth p
 
 ![Game page](documentation/game-page.png)
 
-![Game end](documentation/game-end.png)
+![Game end](documentation/game-end.PNG)
 
 #### Future Implementations
 
