@@ -2,7 +2,7 @@
 
 ![Pick your poison shown on a variety of screen sizes](documentation/responsive.webp)
 
-The deployed site: [Pick your poison](redifoo.me/pick-your-poison/)
+The deployed site: [Pick your poison](https://redifo.github.io/pick-your-poison/)
 
 Pick your poison, cocktails learning quiz game website. 
 Welcome to "Pick Your Poison," an engaging cocktail learning quiz game designed to elevate your mixology knowledge while having fun! This interactive web application combines the thrill of a quiz game with the sophistication of cocktail culture, making learning both enjoyable and informative.
@@ -207,8 +207,7 @@ HTML, CSS, js
 
 ## Deployment & Local Development
 
-The site is deployed using GitHub Pages: https://redifo.github.io/ci_pp1/
-
+The site is deployed using GitHub Pages: [Pick your poison](https://redifo.github.io/pick-your-poison/)
 To Deploy the site using GitHub Pages follow these steps:
 
 1. Log in or sign up on GitHub.
